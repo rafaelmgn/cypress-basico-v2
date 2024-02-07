@@ -1,29 +1,30 @@
-# Testes automatizados com Cypress - Básico
+## cypress-basico-v2
+Projeto basico do curso [**Talking About Testing**](https://udemy.com/user/walmyr) sobre testes automatizados utilizando Cypress.
 
-👋 Seja bem-vindo(a)!
+## Pré-requisitos
+É necessário ter o Node.js e o npm instalados para executar este projeto.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai adorar este curso. ❤️
+Utilizei as versões `v16.13.0` e `8.3.2` do Node.js e npm, respectivamente. Sugiro que você utilize as mesmas versões ou versões mais recentes.
 
-## O que você vai aprender
+## Instalação
+Execute `npm install` (ou `npm i` para a versão curta) para instalar as dependências de desenvolvimento.
 
-Durante o curso de testes automatizados com Cypress (básico), você vai aprender:
+### Instalação e inicialização do Cypress
+Na raiz do projeto, execute o comando `npx cypress open` para abrir o Cypress pela primeira vez
+Por fim, com o Test Runner aberto, delete os exemplos criados automaticamente, crie um arquivo chamado `CAC-TAT.spec.js` e feche o Test Runner.
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar _upload_ de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como executar os testes em um _pipeline_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
+Obs. 2: Quando inicializado pela primeira vez, o Cypress automaticamente cria o arquivo cypress.json e o diretório cypress/, com os sub-diretórios fixtures/, integration/, plugins/ e support/, com seus respetivos arquivos (com exceção dos exemplos, que acabamos de deletar).
 
-## Vamos começar?
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+## Testes
+Podemos rodar os testes simulando navegadores em Desktop ou Mobile em viewport.
 
-___
+### Desktop
+Execute `npm test` (ou `npm t` para a versão curta) para executar o teste em modo headless.
 
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).
+Ou, execute `npm run cy:open` para abrir o Cypress no modo interativo.
+
+### Mobile
+Execute `npm test.mobile` (ou `npm t` para a versão curta) para executar o teste em modo headless para mobile.
+
+Ou, execute `npm run cy:open.mobile` para abrir o Cypress no modo interativo para mobile.
